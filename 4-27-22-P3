@@ -1,1 +1,18 @@
-Write your Answer here
+public static int[] getColumn(int[][] arr2D, int c) {
+  int[] arr = new int[arr2D.length];
+  for (int i = 0, i < c; i++) {
+    arr[0] = arr2D[i][c];
+  }
+  return arr;
+}
+public static isLatin(int[][] square) {
+  boolean noDuplicates = !containsDuplicates(square[0]);
+  boolean values;
+  for (int i = 0; i < square.length; i++) {
+    values = false;
+    if (hasAllValues(square[0], square[i]) && hasAllValues(square[0], getColumn(square, i))) {
+      values = true;  
+    }
+  }
+  return noDuplicates && values;
+}
